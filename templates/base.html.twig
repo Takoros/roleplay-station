@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Roleplay Station</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% block stylesheets %}{% endblock %}
+
+        <script src="{{ asset('js/jquery.min.js') }}" defer></script>
+        <script src="{{ asset('js/popper.js') }}" defer></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}" defer></script>
+        <script src="{{ asset('js/main.js') }}" defer></script>
+    </head>
+    <body>
+        <div class="wrapper d-flex align-items-stretch">
+            {{ include('_shared/navbar.html.twig') }}
+            <div id="content" class="p-4 p-md-5 pt-5">
+                {% block body %}{% endblock %}
+            </div>
+		</div>
+    </body>
+</html>
